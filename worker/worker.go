@@ -99,7 +99,7 @@ func StartWorker(address string, shutdown chan struct{}) {
 }
 
 func main() {
-	// Create a shutdown channel to stop workers when required
+	// Create a shutdown channel to stop workers when required.
 	shutdown := make(chan struct{})
 
 	go StartWorker("localhost:9001", shutdown) // Worker 1
